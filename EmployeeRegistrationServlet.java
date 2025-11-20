@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class forrm extends HttpServlet {
+public class EmployeeRegistrationServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -27,7 +27,7 @@ public class forrm extends HttpServlet {
             Connection con = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/testdb", "root", "");
 
-            String sql = "INSERT INTO emppppp (id, name, desig, salary) VALUES (?, ?, ?, ?)";
+            String sql = "INSERT INTO emp (id, name, desig, salary) VALUES (?, ?, ?, ?)";
 
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, id);
